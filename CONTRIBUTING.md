@@ -65,3 +65,50 @@ to your valuable work:
   You're a contributor!
 - And remember to respect everyone in our global development community. Guidelines
   are established in our `CODE_OF_CONDUCT.md`.
+
+### PR and Branch Strategy
+
+- **Naming:** In general, we prefer the following branch names:
+  `<type>/<initials>-<desc>`. i.e `feat/ask-add-button` The following types are
+  available:
+  - bug : this PR is related to a bug fix
+  - feat : this is a feature related PR
+  - doc : this is a documentation related PR
+  - ref : this is a reference update
+- **Pushes directly to main are not allowed:** We do not allow pushes directly
+  to main.
+- **Forking:** We'd prefer you fork the repo to make adjustments. As the repo
+  matures, expect we will disallow branches directly on the repo.
+- **Limit Scope of PR:** PR's should generally be small and constrained to a
+  very limited scope
+- **History:** Try to maintain a clean history if possible. It makes it easier
+  to review.
+- **Rebase vs. Merge:** We generally prefer rebasing to merging, as long as the
+  history is clean.
+
+### Raising Issues
+
+To raise an issue, you may use Github to do so. Please in doing so, answer the
+following questions:
+
+- Features
+  - what -- what feature do you want
+  - why -- why do you want the feature
+  - stakeholders? -- aside from you, who else wants the feature
+  - considerations/constraints -- any specific constraints with a solution that you need
+- Bugs
+  - what -- what is the bug
+  - why -- why do you need this fixed
+  - replication -- how do you replicate the bug
+  - environment -- please give details on what system you found the bug on
+  - logs/metrics -- please provide logs and/or metrics of the bug as best as possible
+
+### Style Guides
+
+- Files generally should have a descriptor for them as a set of comments. It
+  should outline the intent of the file, scope, and some useful information for
+  someone to understand why the file exists. Feel free to add some character
+  here.
+- Methods generally should have less comments and generally be used to clarify
+  decisions about implementation. I.e we did this vs. that b/c it was faster to
+  implement.
