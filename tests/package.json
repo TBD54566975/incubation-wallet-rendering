@@ -5,9 +5,11 @@
   "devDependencies": {
     "ajv": "^8.12.0",
     "assert": "^2.0.0",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0"
   },
   "scripts": {
-    "test": "mocha --recursive './schema'"
+    "test": "mocha --recursive './schema'",
+    "cicd": "nyc --reporter=lcov --include ../lib/walletrendering.js mocha --recursive './schema'"
   }
 }
