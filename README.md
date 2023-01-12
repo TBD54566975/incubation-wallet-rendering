@@ -27,6 +27,15 @@ The project intends to host over `npm` once it matures.
 You can find the [initial forum proposal](https://forums.tbd.website/t/incubator-proposal-shared-js-components/214/22)
 along with the [initial requirements document](./docs/proposal.md)
 
+## What's the point of this project?
+
+The wallet rendering specs is intended to standardize rendering suggestions to
+wallets from different providers. It helps renders stay consistent across
+ecosystems.
+
+Imagine if you wanted to make sure that the profile always appeared on the "top
+left" of a credential render. The specifications would help guide the render.
+
 ## Architecture and Models
 
 You can find the architecture [here](./docs/architecture.md).
@@ -94,6 +103,12 @@ If you're more of the acting type than of the reading type, the Wallet Rendering
 Playground is a simple Wallet Rendering editor that lets you try out and extend all the examples in the doc.
 
 This will be available in the near future, so please stay tuned.
+
+## Roadmap
+
+1. v0.1: Initial Infrastructure and implementation of Wallet Rendering Specs.
+2. v0.2: Add Vue, React, and Angular wrappers for easier integration into
+   existing projects.
 
 ## Project Resources
 
