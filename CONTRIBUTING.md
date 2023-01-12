@@ -34,9 +34,11 @@ This guide is for you.
 
 ## Development Prerequisites
 
-TODO: This section will be expanded later.
+TODO @andorsk: This section will be expanded later.
 
 ## Communications
+
+TODO @andorsk: To fill out later
 
 ## Discussions
 
@@ -46,7 +48,7 @@ We advocate an asynchronous, written debate model - so write up your thoughts an
 
 ## Continuous Integration
 
-TODO: This will be improved added later
+TODO @andorsk: This will be improved added later
 
 ## Contribution
 
@@ -129,7 +131,7 @@ Issues should generally incorporate the following feedback:
   - environment -- please give details on what system you found the bug on
   - logs/metrics -- please provide logs and/or metrics of the bug as best as possible
 
-TODO: Github templates will be added to support better structure around this.
+TODO @andorsk: Github templates will be added to support better structure around this.
 
 ### Style Guides
 
