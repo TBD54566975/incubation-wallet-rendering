@@ -3,19 +3,19 @@
 ## High Level Architecture
 
 ```mermaid
-graph TD
-    [WalletRenderingCore][Wallet Rendering Core @wallet-rendering/core]
-    React
-    Angular
-    Vue
+graph BT
+    WalletRenderingCore[wallet-rendering/core]
+    React[wallet-rendering/react]
+    Angular[wallet-rendering/angular]
+    Vue[wallet-rendering/vue]
 
-    React --- WalletRenderingCore
-    Angular --- WalletRenderingCore
-    Vue --- WalletRenderingCore
+    React --> WalletRenderingCore
+    Angular --> WalletRenderingCore
+    Vue --> WalletRenderingCore
 
-    VueRenderSet --- Vue
-    AngularRenderSet --- Angular
-    ReactRenderSet --- React
+    VueRenderSet[vue-walletrender-renderset] --> Vue
+    AngularRenderSet[angular-walletrender-renderset] --> Angular
+    ReactRenderSet[react-walletrender-renderset] --> React
 ```
 
 ## Internal Models
