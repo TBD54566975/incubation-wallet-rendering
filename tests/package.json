@@ -1,0 +1,13 @@
+{
+  "name": "incubation-wallet-rendering",
+  "description": "Incubation Project: Implementation of DIF's Wallet Rendering Specification, Project Led by Benri",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "assert": "^2.0.0",
+    "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "test": "mocha --recursive './schema'"
+  }
+}
