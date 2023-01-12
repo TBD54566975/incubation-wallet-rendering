@@ -1,5 +1,8 @@
 # Wallet Rendering Library
 
+[![license Apache 2](https://img.shields.io/badge/license-Apache%202-black)](https://github.com/TBD54566975/ssi-sdk/blob/main/LICENSE)
+[![issues](https://img.shields.io/github/issues/TBD54566975/incubation-wallet-rendering)](https://github.com/TBD54566975/incubation-wallet-rendering/issues)
+
 ## Overview
 
 **Status:** STARTED AND IN PROGRESS
