@@ -37,7 +37,12 @@ wallets from different providers. It helps renders stay consistent across
 ecosystems.
 
 Imagine if you wanted to make sure that the profile always appeared on the "top
-left" of a credential render. The specifications would help guide the render.
+left" of a credential render. The specifications guide the render so
+that you can get more consistent visualizations across disparate wallets.
+
+The goal of this project is to become the de-facto library you use to help
+render various assets within the wallet rendering spec, which is currently
+scoped to Verifiable Credentials.
 
 ## Architecture and Models
 

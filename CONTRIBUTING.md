@@ -131,8 +131,6 @@ Issues should generally incorporate the following feedback:
   - environment -- please give details on what system you found the bug on
   - logs/metrics -- please provide logs and/or metrics of the bug as best as possible
 
-TODO @andorsk: Github templates will be added to support better structure around this.
-
 ### Style Guides
 
 - Files generally should have a descriptor for them as a set of comments. It
