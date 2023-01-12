@@ -110,6 +110,24 @@ This will be available in the near future, so please stay tuned.
 2. v0.2: Add Vue, React, and Angular wrappers for easier integration into
    existing projects.
 
+## File Structure
+
+This is the current proposed file structure. It may change as the project matures.
+
+```text
+- deps // any dependencies
+- lib // library
+  - walletrendering.js
+- packages // packages built to support the wallet rendering core lib
+  - angular
+  - vue
+  - react
+- playground // wallet rendering playground
+  - playground.js
+  - index.html
+- examples // example files
+```
+
 ## Project Resources
 
 | Resource                                   | Description                                                                   |
