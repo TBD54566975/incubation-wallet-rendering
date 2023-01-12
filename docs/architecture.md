@@ -1,5 +1,7 @@
 # Architecture
 
+This is currently in progress.
+
 ```mermaid
 classDiagram
 

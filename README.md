@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Status:** IN PROGRESS
+**Status:** STARTED AND IN PROGRESS
 
 This project is currently just started, and a work in progress. Most of the
 library doesn't work (yet), but stay tuned for future updates.
@@ -92,6 +92,8 @@ TODO: In progress!
 
 If you're more of the acting type than of the reading type, the Wallet Rendering
 Playground is a simple Wallet Rendering editor that lets you try out and extend all the examples in the doc.
+
+This will be available in the near future, so please stay tuned.
 
 ## Project Resources
 

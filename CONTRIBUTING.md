@@ -1,5 +1,26 @@
 # Contribution Guide
 
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+
+**Table of Contents**
+
+- [Contribution Guide](#contribution-guide)
+- [Development Prerequisites](#development-prerequisites)
+- [Communications](#communications)
+- [Discussions](#discussions)
+- [Continuous Integration](#continuous-integration)
+- [Contribution](#contribution)
+  - [PR and Branch Guide](#pr-and-branch-guide)
+  - [Commits](#commits)
+  - [Raising Issues](#raising-issues)
+  - [Style Guides](#style-guides)
+  - [Tagging](#tagging)
+- [Labels](#labels)
+  - [Priority Labels](#priority-labels)
+- [Type Labels](#type-labels)
+
+<!-- markdown-toc end -->
+
 There are many ways to be an open source contributor, and we're here to help you on your way! You may:
 
 - Propose ideas in our
@@ -17,18 +38,18 @@ TODO: This section will be expanded later.
 
 ## Communications
 
-### Issues
+## Issues
 
 Anyone from the community is welcome (and encouraged!) to raise issues via
 [GitHub Issues](https://github.com/TBD54566975/incubation-wallet-rendering/issues)
 
-### Discussions
+## Discussions
 
 Design discussions and proposals take place on our [discussion forums](https://forums.tbd.website).
 
 We advocate an asynchronous, written debate model - so write up your thoughts and invite the community to join in!
 
-### Continuous Integration
+## Continuous Integration
 
 TODO: This will be improved added later
 
@@ -96,8 +117,10 @@ The below documents some basic best practices for your pull requests.
 
 ### Raising Issues
 
-To raise an issue, you may use Github to do so. Please in doing so, answer the
-following questions:
+Anyone from the community is welcome (and encouraged!) to raise issues via
+[GitHub Issues](https://github.com/TBD54566975/incubation-wallet-rendering/issues)
+
+Issues should generally incorporate the following feedback:
 
 - Features
   - what -- what feature do you want
@@ -110,6 +133,8 @@ following questions:
   - replication -- how do you replicate the bug
   - environment -- please give details on what system you found the bug on
   - logs/metrics -- please provide logs and/or metrics of the bug as best as possible
+
+TODO: Github templates will be added to support better structure around this.
 
 ### Style Guides
 
@@ -127,7 +152,7 @@ following questions:
 - Releases should be versioned and if needed, appended with a pre-release tag, e.g. "v1", "v3-RC1", "v4-IIW39"
 - Versioning should be simple, only major releases numbered, prepended with letter v. e.g. v1, v2, v3.
 
-### Labels
+## Labels
 
 ### Priority Labels
 
