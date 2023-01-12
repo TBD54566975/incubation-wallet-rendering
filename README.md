@@ -3,8 +3,10 @@
 ## Overview
 
 **Status:** IN PROGRESS
+
 This project is currently just started, and a work in progress. Most of the
-library doesn't work, but stay tuned for furture updates.
+library doesn't work (yet), but stay tuned for future updates.
+
 **Project Kick-Off Date:** January 12, 2023
 
 ## Introduction
@@ -23,7 +25,7 @@ JSONForm](https://github.com/eclipsesource/jsonforms) was built.
 The project intends to host over `npm` once it matures.
 
 You can find the [initial forum proposal](https://forums.tbd.website/t/incubator-proposal-shared-js-components/214/22)
-along with the [initial prd](./docs/proposal.md)
+along with the [initial requirements document](./docs/proposal.md)
 
 ## Architecture and Models
 
@@ -31,18 +33,11 @@ You can find the architecture [here](./docs/architecture.md).
 
 Diagrams and other visuals are helpful here. Perhaps code snippets showing usage.
 
-Project leads should complete, alongside this `README`:
-
-- [CONTRIBUTING.md](./CONTRIBUTING.md) - Fill out how to: install prereqs, build, test, run, access CI, chat, discuss, file issues
-
-The other files in this template repo may be used as-is:
-
-- [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
-- [GOVERNANCE.md](./GOVERNANCE.md)
-
 ## Getting Started
 
 The example below renders a basic wallet with a hero and thumbnail object:
+
+TODO: In progress!
 
 ```html
 <!DOCTYPE html>
@@ -92,12 +87,6 @@ The example below renders a basic wallet with a hero and thumbnail object:
   </body>
 </html>
 ```
-
-Loading this page in a browser renders a form with two input fields and a submit
-button. The onSubmit function is called upon form submission.
-
-NB: Paths in this example are relative to the root of the Wallet Rendering
-implementation
 
 ## Playground
 
