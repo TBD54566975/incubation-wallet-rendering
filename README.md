@@ -25,7 +25,7 @@ JSONForm](https://github.com/eclipsesource/jsonforms) was built.
 The project intends to host over `npm` once it matures.
 
 You can find the [initial forum proposal](https://forums.tbd.website/t/incubator-proposal-shared-js-components/214/22)
-along with the [initial requirements document](./docs/proposal.md)
+along with the [initial requirements document](./docs/proposal.md).
 
 ## What's the point of this project?
 
@@ -40,11 +40,11 @@ left" of a credential render. The specifications would help guide the render.
 
 You can find the architecture [here](./docs/architecture.md).
 
-Diagrams and other visuals are helpful here. Perhaps code snippets showing usage.
-
 ## Getting Started
 
-The example below renders a basic wallet with a hero and thumbnail object:
+The example below renders a basic wallet with a hero and thumbnail object. Note,
+this doesn't work yet, but it is a reference implementation of how it might
+work.
 
 TODO: In progress!
 
