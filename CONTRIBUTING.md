@@ -38,11 +38,6 @@ TODO: This section will be expanded later.
 
 ## Communications
 
-## Issues
-
-Anyone from the community is welcome (and encouraged!) to raise issues via
-[GitHub Issues](https://github.com/TBD54566975/incubation-wallet-rendering/issues)
-
 ## Discussions
 
 Design discussions and proposals take place on our [discussion forums](https://forums.tbd.website).
