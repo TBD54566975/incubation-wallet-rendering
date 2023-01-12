@@ -66,25 +66,33 @@ to your valuable work:
 - And remember to respect everyone in our global development community. Guidelines
   are established in our `CODE_OF_CONDUCT.md`.
 
-### PR and Branch Strategy
+### PR and Branch Guide
 
-- **Naming:** In general, we prefer the following branch names:
-  `<type>/<initials>-<desc>`. i.e `feat/ask-add-button` The following types are
-  available:
-  - bug : this PR is related to a bug fix
-  - feat : this is a feature related PR
-  - doc : this is a documentation related PR
-  - ref : this is a reference update
+The below documents some basic best practices for your pull requests.
+
+- **Branch naming guide:** In general, we prefer the following branch names:
+  `<type>/<desc>`. i.e `feat/add-button` . Check the shortcodes of [the type labels
+  section](#type-labels) for available short codes.
 - **Pushes directly to main are not allowed:** We do not allow pushes directly
   to main.
-- **Forking:** We'd prefer you fork the repo to make adjustments. As the repo
+- **Prefer forking vs. branching of origin:** We'd prefer you fork the repo to make adjustments. As the repo
   matures, expect we will disallow branches directly on the repo.
 - **Limit Scope of PR:** PR's should generally be small and constrained to a
   very limited scope
-- **History:** Try to maintain a clean history if possible. It makes it easier
-  to review.
-- **Rebase vs. Merge:** We generally prefer rebasing to merging, as long as the
+- **Rebase preference:** We generally prefer rebasing to merging, as long as the
   history is clean.
+- **Encourage discourse:** Request additional reviewers to create dialogue.
+- **Be precise:** Be precise in your comments about what needs to be fixed.
+- **Be transparent:** Try to keep a transparent audit trail of your conversation
+  so people can follow it.
+- **Clear titles:** Create a clear PR title and description.
+- **Get a CODEOWNER to review your PR:** One CODEOWNER must sign off on review
+
+### Commits
+
+- **Signed commits not required:** Signing commits is currently not required, but that might change in time.
+- **Keep a clean history:** Try to maintain a clean history if possible. This is
+  not enforced, but is greatly appreciated and allows better rebase into the main branch.
 
 ### Raising Issues
 
@@ -112,3 +120,36 @@ following questions:
 - Methods generally should have less comments and generally be used to clarify
   decisions about implementation. I.e we did this vs. that b/c it was faster to
   implement.
+
+### Tagging
+
+- Version tags are used for each release of the document
+- Releases should be versioned and if needed, appended with a pre-release tag, e.g. "v1", "v3-RC1", "v4-IIW39"
+- Versioning should be simple, only major releases numbered, prepended with letter v. e.g. v1, v2, v3.
+
+### Labels
+
+### Priority Labels
+
+Priority labels are used to describe the impact and focus of the issue. Higher
+priority means it is more likely to find focus within the group.
+
+| Priority | Label    | Usage                                                                              |
+| -------- | -------- | ---------------------------------------------------------------------------------- |
+| priority | critical | This is the highest level and will get immediate attention                         |
+| priority | high     | This might be balanced with other highly prioritized tasks                         |
+| priority | medium   | A medium priority issue                                                            |
+| priority | low      | This issue is low priority and may be deferred to a later date without consequence |
+
+### Type Labels
+
+Type labels are labels the define the nature of the issue and/or the correction
+itself.
+
+| Type | Label         | ShortCode | Usage                                  |
+| ---- | ------------- | --------- | -------------------------------------- |
+| type | feature       | feat      | The issue involves a feature expansion |
+| type | bug           | bug       | The issue involves a bug.              |
+| type | documentation | doc       | The issue is fixing a documentation    |
+| type | reference     | ref       | The issue involves fixing a reference. |
+| type | admin         | admin     | Admin related issues                   |
