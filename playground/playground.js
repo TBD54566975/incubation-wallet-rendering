@@ -92,7 +92,7 @@ $("document").ready(function () {
     try {
       var aceId = $("#ace-editor").attr("id");
       var data = JSON.parse(editor.getSession().getValue());
-      target.WalletRender(data);
+      target.walletRender(data);
     } catch (error) {
       target.html(error);
       console.log(error);
