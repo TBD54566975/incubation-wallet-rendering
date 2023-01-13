@@ -88,12 +88,11 @@ $("document").ready(function () {
    * editor.
    */
   var updateRender = function () {
+    var target = $("#results-container");
     try {
-      var target = $("#results-container");
       var aceId = $("#ace-editor").attr("id");
       var data = JSON.parse(editor.getSession().getValue());
-      console.log("got data", data);
-      target.text(JSON.stringify(data));
+      target.WalletRender(data);
     } catch (error) {
       target.html(error);
       console.log(error);
