@@ -28,6 +28,7 @@
             bottom: 0;
             left: 0;
         }
+
     </style>
   </head>
   <body>
@@ -48,8 +49,10 @@
     </nav>
     <div class="container-fluid fill-height" id="editor-container">
 
-      <button>Select Example</button>
-      <button>Select Schema</button>
+    <div>
+      <select name="example" id="schema-selection">
+          <option value="getting-started">Getting Started</option>
+      </select>
 
       <div class="row" id="editor-row">
         <div class="col-md-6" id="col1">
