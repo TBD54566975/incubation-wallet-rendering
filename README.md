@@ -54,8 +54,6 @@ The example below renders a basic wallet with a hero and thumbnail object. Note,
 this doesn't work yet, but it is a reference implementation of how it might
 work.
 
-TODO: In progress!
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -66,38 +64,28 @@ TODO: In progress!
   </head>
   <body>
     <h1>Getting started with Wallet Rendering</h1>
-    <div id="wr" />
+    <div id="viz" />
     <div id="res" class="alert"></div>
     <script type="text/javascript" src="deps/jquery.min.js"></script>
     <script type="text/javascript" src="deps/underscore.js"></script>
-    <script type="text/javascript" src="deps/opt/wr.js"></script>
-    <script type="text/javascript" src="lib/wr.js"></script>
+    <script type="text/javascript" src="lib/walletrendering.js"></script>
     <script type="text/javascript">
-      $("#wr").renderWallet({
-          data: {
-              thumbnail: {
-                   uri: "https://dol.wa.com/logo.png",
-                   alt: "Washington State Seal"
-              },
-              hero: {
-                   uri: "https://dol.wa.com/people-working.png",
-                   alt: "People working on serious things"
-              },
-              background: {
-                  color: "#ff0000"
-              },
-              text: {
-                   color: "#d4d400"
-              }
-         },
-         onSubmit: function (errors, values) {
-          if (errors) {
-            $("#res").html("<p>Can't update</p>");
-          } else {
-            $("#res").html(
-                alert(values);
-            );
-          }
+      $("#viz").walletRender({
+        data: {
+          thumbnail: {
+            uri: "https://dol.wa.com/logo.png",
+            alt: "Washington State Seal",
+          },
+          hero: {
+            uri: "https://dol.wa.com/people-working.png",
+            alt: "People working on serious things",
+          },
+          background: {
+            color: "#ff0000",
+          },
+          text: {
+            color: "#d4d400",
+          },
         },
       });
     </script>
