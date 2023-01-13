@@ -1,9 +1,9 @@
 $("document").ready(function () {
   var exampleSelector = $("#example-selection");
+  var aceId = $("#ace-editor").attr("id");
+  var editor = ace.edit(aceId);
 
   var createEditor = function () {
-    var aceId = $("#ace-editor").attr("id");
-    var editor = ace.edit(aceId);
     editor.session.setMode("ace/mode/json");
     editor.setTheme("ace/theme/twilight");
   };
@@ -66,18 +66,38 @@ $("document").ready(function () {
       });
   };
 
-  var loadSelection = function () {
-    var example = exampleSelector.find(":selected").val();
-    loadExample(example);
-  };
-
+  /*
+   * Initalize the playground
+   */
   var init = function () {
     createEditor();
     selections.forEach(function (v) {
       exampleSelector.append(new Option(v.name, v.path));
     });
-    loadSelection();
+    var example = exampleSelector.find(":selected").val();
+    loadExample(example);
     onChangeSelection();
+  };
+
+  editor.getSession().on("change", function () {
+    updateRender();
+  });
+  /*
+   * Calls the walletrender .render()
+   * method with data based upon the contents of the
+   * editor.
+   */
+  var updateRender = function () {
+    try {
+      var target = $("#results-container");
+      var aceId = $("#ace-editor").attr("id");
+      var data = JSON.parse(editor.getSession().getValue());
+      console.log("got data", data);
+      target.text(JSON.stringify(data));
+    } catch (error) {
+      target.html(error);
+      console.log(error);
+    }
   };
 
   init();
