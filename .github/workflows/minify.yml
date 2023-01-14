@@ -1,0 +1,35 @@
+name: Minify Workflow
+on:
+  push:
+    branches:
+      - "*"
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+
+jobs:
+  minify:
+    if: ${{ !github.event.pull_request.draft }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+
+      - run: npm install -g minify
+      - run: make build
+
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Minify Bot"
+          git config user.email "<>"
+
+      - name: commit
+        run: |
+          git add lib/walletrendering.min.js
+          git commit -m "bot: minification"
+          git push ${{ github.ref }}
