@@ -34,6 +34,36 @@ $("document").ready(function () {
       id: "ldmo-with-text",
       path: "dmo-with-text.json",
     },
+    {
+      name: "Credential Manifest All Features",
+      id: "cm-all-features",
+      path: "cm-all-features.json",
+    },
+    {
+      name: "Credential Manifest Appendix JWT",
+      id: "cm-appendix-jwt",
+      path: "cm-appendix-jwt.json",
+    },
+    {
+      name: "Credential Manifest Application Sample",
+      id: "cm-application-sample",
+      path: "cm-application-sample.json",
+    },
+    {
+      name: "Credential Manifest Sample Fullfillment",
+      id: "cm-sample-fullfillment",
+      path: "cm-sample-fullfillment.json",
+    },
+    {
+      name: "Credential Manifest Sample Denial",
+      id: "cm-sample-denial",
+      path: "cm-sample-denial.json",
+    },
+    {
+      name: "Credential Manifest Response Appendix JWT",
+      id: "cr-appendix-jwt",
+      path: "cr-appendix-jwt.json",
+    },
   ];
 
   /*
@@ -92,7 +122,9 @@ $("document").ready(function () {
     try {
       var aceId = $("#ace-editor").attr("id");
       var data = JSON.parse(editor.getSession().getValue());
-      target.walletRender(data);
+      target.walletRender({
+        data: data,
+      });
     } catch (error) {
       target.html(error);
       console.log(error);
