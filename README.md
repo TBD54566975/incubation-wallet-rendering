@@ -66,38 +66,27 @@ TODO: In progress!
   </head>
   <body>
     <h1>Getting started with Wallet Rendering</h1>
-    <div id="wr" />
-    <div id="res" class="alert"></div>
+    <div id="viz" />
     <script type="text/javascript" src="deps/jquery.min.js"></script>
     <script type="text/javascript" src="deps/underscore.js"></script>
-    <script type="text/javascript" src="deps/opt/wr.js"></script>
-    <script type="text/javascript" src="lib/wr.js"></script>
+    <script type="text/javascript" src="lib/wrender.js"></script>
     <script type="text/javascript">
-      $("#wr").renderWallet({
-          data: {
-              thumbnail: {
-                   uri: "https://dol.wa.com/logo.png",
-                   alt: "Washington State Seal"
-              },
-              hero: {
-                   uri: "https://dol.wa.com/people-working.png",
-                   alt: "People working on serious things"
-              },
-              background: {
-                  color: "#ff0000"
-              },
-              text: {
-                   color: "#d4d400"
-              }
-         },
-         onSubmit: function (errors, values) {
-          if (errors) {
-            $("#res").html("<p>Can't update</p>");
-          } else {
-            $("#res").html(
-                alert(values);
-            );
-          }
+      $("#viz").renderWallet({
+        data: {
+          thumbnail: {
+            uri: "https://dol.wa.com/logo.png",
+            alt: "Washington State Seal",
+          },
+          hero: {
+            uri: "https://dol.wa.com/people-working.png",
+            alt: "People working on serious things",
+          },
+          background: {
+            color: "#ff0000",
+          },
+          text: {
+            color: "#d4d400",
+          },
         },
       });
     </script>
@@ -112,6 +101,10 @@ Playground is a simple Wallet Rendering editor that lets you try out and extend 
 
 This will be available in the near future, so please stay tuned.
 
+<div align="center">
+  <img width="600" src="https://i.imgur.com/paIo8Yi.png" alt="sample playground" />
+</div>
+
 ## Roadmap
 
 1. v0.1: Initial Infrastructure and implementation of Wallet Rendering Specs.
@@ -125,7 +118,8 @@ This is the current proposed file structure. It may change as the project mature
 ```text
 - deps // any dependencies
 - lib // library
-  - walletrendering.js
+  - wrender.js
+  - wrender.min.js
 - packages // packages built to support the wallet rendering core lib
   - angular
   - vue
