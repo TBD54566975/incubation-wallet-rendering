@@ -114,6 +114,7 @@ This is the current proposed file structure. It may change as the project mature
 - deps // any dependencies
 - lib // library
   - walletrendering.js
+  - walletrendering.min.js
 - packages // packages built to support the wallet rendering core lib
   - angular
   - vue
