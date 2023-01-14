@@ -102,7 +102,7 @@ Playground is a simple Wallet Rendering editor that lets you try out and extend 
 This will be available in the near future, so please stay tuned.
 
 <div align="center">
-  <img width="300" src="https://i.imgur.com/paIo8Yi.png" alt="sample playground" />
+  <img width="600" src="https://i.imgur.com/paIo8Yi.png" alt="sample playground" />
 </div>
 
 ## Roadmap
