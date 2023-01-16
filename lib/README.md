@@ -12,6 +12,8 @@ following process then takes place.
 
 Here's a class diagram for review.
 
+![](https://i.imgur.com/zZvcKDj.png)
+
 ```mermaid
 classDiagram
 
