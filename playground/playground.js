@@ -1,18 +1,56 @@
 $("document").ready(function () {
   var exampleSelector = $("#example-selection");
-  var aceId = $("#ace-editor").attr("id");
-  var editor = ace.edit(aceId);
+  var dataAceEditorId = $("#data-editor-textarea").attr("id");
+  var schemaAceEditorId = $("#schema-editor-textarea").attr("id");
 
-  var createEditor = function () {
-    editor.session.setMode("ace/mode/json");
-    editor.setTheme("ace/theme/twilight");
+  var dataEditor = ace.edit(dataAceEditorId);
+  var schemaEditor = ace.edit(schemaAceEditorId);
+
+  var schemaSelector = $("#schema-selection");
+
+  var createEditors = function () {
+    dataEditor.session.setMode("ace/mode/json");
+    dataEditor.setTheme("ace/theme/twilight");
+    schemaEditor.session.setMode("ace/mode/json");
+    schemaEditor.setTheme("ace/theme/twilight");
   };
+
+  var schemas = [
+    {
+      name: "Entity Style Schema",
+      path: "entity_styles.json",
+    },
+    {
+      name: "Credential Manifest Schema",
+      path: "credential-manifest.json",
+    },
+
+    {
+      name: "Credential Response Schema",
+      path: "credential-response.json",
+    },
+
+    {
+      name: "Display Mapping Object",
+      path: "display_mapping_object.json",
+    },
+
+    {
+      name: "Labelled Display Mapping Object",
+      path: "labelled_display_mapping_object.json",
+    },
+    {
+      name: "Output Descriptors",
+      path: "output-descriptors.json",
+    },
+  ];
 
   var selections = [
     {
-      name: "Entity Styles",
+      name: "Entity Styles Examples",
       id: "entity-styles",
       path: "entity-styles.json",
+      schema: "entity_styles.json",
     },
     {
       name: "Data Mapping Object With Text",
@@ -78,6 +116,36 @@ $("document").ready(function () {
     });
   };
 
+  /*
+   * TODO Refacotr this
+   * event listener for change of selection on
+   * schema selector
+   * */
+  var onChangeSchemaSelection = function () {
+    schemaSelector.change(function (v) {
+      var selection = $(this);
+      var path = selection.find(":selected").val();
+      loadSchema(path);
+    });
+  };
+
+  /**
+   * Loads and displays the schema identified by the given name
+   */
+  var loadSchema = function (path) {
+    const schemaEditorId = "schema-dataEditor-textarea";
+    $.ajax({
+      url: "../schemas/" + path,
+      dataType: "text",
+    })
+      .done(function (code) {
+        schemaEditor.getSession().setValue(code);
+      })
+      .fail(function () {
+        $("#result").html("Sorry, I could not retrieve the schema!");
+      });
+  };
+
   /**
    * Loads and displays the example identified by the given name
    */
@@ -87,9 +155,7 @@ $("document").ready(function () {
       dataType: "text",
     })
       .done(function (code) {
-        var aceId = $("#ace-editor").attr("id");
-        var editor = ace.edit(aceId);
-        editor.getSession().setValue(code);
+        dataEditor.getSession().setValue(code);
       })
       .fail(function () {
         $("#result").html("Sorry, I could not retrieve the example!");
@@ -100,28 +166,44 @@ $("document").ready(function () {
    * Initalize the playground
    */
   var init = function () {
-    createEditor();
+    createEditors();
+
     selections.forEach(function (v) {
       exampleSelector.append(new Option(v.name, v.path));
     });
+
+    schemas.forEach(function (v) {
+      schemaSelector.append(new Option(v.name, v.path));
+    });
+
+    const defaultSchema = "credential-manifest.json";
+    const defaultData = "cm-all-features.json";
+    exampleSelector.val(defaultData);
+
     var example = exampleSelector.find(":selected").val();
     loadExample(example);
     onChangeSelection();
+
+    var schema = schemaSelector.find(":selected").val();
+    schemaSelector.val(defaultSchema);
+
+    loadSchema(schema);
+    onChangeSchemaSelection();
   };
 
-  editor.getSession().on("change", function () {
+  dataEditor.getSession().on("change", function () {
     updateRender();
   });
   /*
    * Calls the walletrender .render()
    * method with data based upon the contents of the
-   * editor.
+   * dataEditor.
    */
   var updateRender = function () {
     var target = $("#results-container");
     try {
-      var aceId = $("#ace-editor").attr("id");
-      var data = JSON.parse(editor.getSession().getValue());
+      var dataAceEditorId = $("#ace-dataEditor").attr("id");
+      var data = JSON.parse(dataEditor.getSession().getValue());
       target.walletRender({
         data: data,
       });

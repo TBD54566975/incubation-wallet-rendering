@@ -13,21 +13,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" integrity="sha512-KuSX+43gVS5MEIJD2ewtrFPOHqC1PJnL8o2f5ciggPC0JUZ8XV0QXlfArO1mSzKkVFdRjsBDfrTU96C5SuRfqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
 
-        #editor-row {
-            min-height: 100vh;
-        }
+     body {
+       padding: 0 24px;
+       margin: 0;
+       height: 100vh;
+     }
 
-        .row {
-            border-style: dotted;
-        }
+     .editor-row {
+       min-height: 100vh;
+     }
 
-        #ace-editor {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
+    .text-center {
+      display: block;
+      text-align: center;
+    }
+
+    .row {
+      border-style: dotted;
+    }
+
+    #data-editor-textarea {
+      position: relative;
+      height: 50%;
+    }
+
+    #schema-editor-textarea{
+      position: relative;
+      height: 50%;
+    }
 
     </style>
   </head>
@@ -50,12 +63,23 @@
     <div class="container-fluid fill-height" id="editor-container">
 
     <div>
-      <select name="example" id="example-selection">
+      Examples: <select name="example" id="example-selection">
+      </select>
+      Schema: <select name="schema" id="schema-selection">
       </select>
 
-      <div class="row" id="editor-row">
-        <div class="col-md-6" id="col1">
-            <div id="ace-editor"> </div>
+      <div class="row editor-row" id="main-editor-row">
+        <div class="col-md-6">
+            <div class="row text-center">
+              Data Editor
+            </div>
+            <div class="row" id="data-editor-textarea">
+            </div>
+            <div class="row text-center">
+              Schema Editor
+            </div>
+            <div class="row" id="schema-editor-textarea">
+            </div>
         </div>
         <div class="col-md-6 text-center align-middle p-5" id="results-container">
           <h2>Generated Credential</h2>
