@@ -19,6 +19,11 @@
        height: 100vh;
      }
 
+     #schema-tree-tool {
+       background-color: black;
+       color: white;
+     }
+
      .editor-row {
        min-height: 100vh;
      }
@@ -81,9 +86,21 @@
             <div class="row" id="schema-editor-textarea">
             </div>
         </div>
-        <div class="col-md-6 text-center align-middle p-5" id="results-container">
-          <h2>Generated Credential</h2>
-          <div id="result" class="well">(please wait)</div>
+        <div class="col-md-6 text-center align-middle p-5">
+
+          <div class="row text-center">
+            <h5>Generated Credential</h5>
+          </div>
+          <div class="row p-5" id="results-container">
+          </div>
+          <div class="row text-center p-3" id="message-id">
+            Message:
+          </div>
+          <div class="row text-center">
+            <h5>Schema Tree Visualization</h5>
+          </div>
+          <div class="row p-5" id="schema-tree-tool">
+          </div>
         </div>
       </div>
     </div>

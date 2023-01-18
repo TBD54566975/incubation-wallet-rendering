@@ -2,10 +2,8 @@ $("document").ready(function () {
   var exampleSelector = $("#example-selection");
   var dataAceEditorId = $("#data-editor-textarea").attr("id");
   var schemaAceEditorId = $("#schema-editor-textarea").attr("id");
-
   var dataEditor = ace.edit(dataAceEditorId);
   var schemaEditor = ace.edit(schemaAceEditorId);
-
   var schemaSelector = $("#schema-selection");
 
   var createEditors = function () {
@@ -133,7 +131,6 @@ $("document").ready(function () {
    * Loads and displays the schema identified by the given name
    */
   var loadSchema = function (path) {
-    const schemaEditorId = "schema-dataEditor-textarea";
     $.ajax({
       url: "../schemas/" + path,
       dataType: "text",
@@ -178,15 +175,15 @@ $("document").ready(function () {
 
     const defaultSchema = "credential-manifest.json";
     const defaultData = "cm-all-features.json";
+
     exampleSelector.val(defaultData);
 
     var example = exampleSelector.find(":selected").val();
     loadExample(example);
     onChangeSelection();
 
-    var schema = schemaSelector.find(":selected").val();
     schemaSelector.val(defaultSchema);
-
+    var schema = schemaSelector.find(":selected").val();
     loadSchema(schema);
     onChangeSchemaSelection();
   };
@@ -194,6 +191,11 @@ $("document").ready(function () {
   dataEditor.getSession().on("change", function () {
     updateRender();
   });
+
+  schemaEditor.getSession().on("change", function () {
+    updateRender();
+  });
+
   /*
    * Calls the walletrender .render()
    * method with data based upon the contents of the
@@ -202,14 +204,14 @@ $("document").ready(function () {
   var updateRender = function () {
     var target = $("#results-container");
     try {
-      var dataAceEditorId = $("#ace-dataEditor").attr("id");
       var data = JSON.parse(dataEditor.getSession().getValue());
+      var schema = JSON.parse(schemaEditor.getSession().getValue());
       target.walletRender({
         data: data,
+        schema: schema,
       });
     } catch (error) {
       target.html(error);
-      console.log(error);
     }
   };
 
