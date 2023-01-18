@@ -3,8 +3,7 @@
   "description": "Incubation Project: Implementation of DIF's Wallet Rendering Specification, Project Led by Benri",
   "license": "Apache-2.0",
   "devDependencies": {
-    "ajv": "^6.12.5",
-    "jest": "^29.3.1"
+    "ajv": "^6.12.5"
   },
   "scripts": {
     "test": "jest './schema'",
