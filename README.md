@@ -2,6 +2,7 @@
 
 [![license Apache 2](https://img.shields.io/badge/license-Apache%202-black)](https://github.com/TBD54566975/ssi-sdk/blob/main/LICENSE)
 [![issues](https://img.shields.io/github/issues/TBD54566975/incubation-wallet-rendering)](https://github.com/TBD54566975/incubation-wallet-rendering/issues)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering?ref=badge_shield)
 
 ## Overview
 
@@ -139,3 +140,7 @@ This is the current proposed file structure. It may change as the project mature
 | [CONTRIBUTING.md](./CONTRIBUTING.md)       | Developer guide to build, test, run, access CI, chat, discuss, file issues    |
 | [GOVERNANCE.md](./GOVERNANCE.md)           | Project governance                                                            |
 | [LICENSE](./LICENSE)                       | Apache License, Version 2.0                                                   |
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering?ref=badge_large)

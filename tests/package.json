@@ -3,13 +3,10 @@
   "description": "Incubation Project: Implementation of DIF's Wallet Rendering Specification, Project Led by Benri",
   "license": "Apache-2.0",
   "devDependencies": {
-    "ajv": "^6.12.5",
-    "assert": "^2.0.0",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0"
+    "ajv": "^6.12.5"
   },
   "scripts": {
-    "test": "mocha --recursive './schema'",
-    "cicd": "nyc --reporter=lcov --include ../lib/walletrendering.js mocha --recursive './schema'"
+    "test": "jest './schema'",
+    "cicd": "nyc --reporter=lcov --include ../lib/wrender.js jest './schema'"
   }
 }
