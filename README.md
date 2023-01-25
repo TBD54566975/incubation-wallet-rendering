@@ -55,8 +55,6 @@ The example below renders a basic wallet with a hero and thumbnail object. Note,
 this doesn't work yet, but it is a reference implementation of how it might
 work.
 
-TODO: In progress!
-
 ```html
 <!DOCTYPE html>
 <html>
@@ -70,7 +68,7 @@ TODO: In progress!
     <div id="viz" />
     <script type="text/javascript" src="deps/jquery.min.js"></script>
     <script type="text/javascript" src="deps/underscore.js"></script>
-    <script type="text/javascript" src="lib/wrender.js"></script>
+    <script type="text/javascript" src="lib/jro.js"></script>
     <script type="text/javascript">
       $("#viz").renderWallet({
         data: {
@@ -119,8 +117,13 @@ This is the current proposed file structure. It may change as the project mature
 ```text
 - deps // any dependencies
 - lib // library
+<<<<<<< HEAD
+  - walletrendering.js
+  - walletrendering.min.js
+=======
   - wrender.js
   - wrender.min.js
+>>>>>>> c910e20a4a59d33a329d313fae9e9ef69266bb07
 - packages // packages built to support the wallet rendering core lib
   - angular
   - vue
@@ -141,6 +144,6 @@ This is the current proposed file structure. It may change as the project mature
 | [GOVERNANCE.md](./GOVERNANCE.md)           | Project governance                                                            |
 | [LICENSE](./LICENSE)                       | Apache License, Version 2.0                                                   |
 
-
 ## License
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering?ref=badge_large)
