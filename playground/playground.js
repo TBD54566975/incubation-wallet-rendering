@@ -26,7 +26,6 @@ $("document").ready(function () {
       name: "Credential Manifest Schema",
       path: "credential-manifest.json",
     },
-
     {
       name: "Credential Response Schema",
       path: "credential-response.json",
@@ -82,6 +81,11 @@ $("document").ready(function () {
       name: "Credential Manifest All Features",
       id: "cm-all-features",
       path: "cm-all-features.json",
+    },
+    {
+      name: "Credential Manifest All Features Working Link",
+      id: "cm-all-features-2",
+      path: "cm-all-features-2.json",
     },
     {
       name: "Credential Manifest Appendix JWT",
@@ -183,7 +187,7 @@ $("document").ready(function () {
 
     // const defaultSchema = "credential-manifest.json";
     // const defaultData = "cm-all-features.json";
-    const defaultData = "cm-all-features.json";
+    const defaultData = "cm-all-features-2.json";
     const defaultSchema = "credential-manifest.json";
 
     exampleSelector.val(defaultData);
