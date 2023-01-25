@@ -39,5 +39,8 @@ jobs:
         run: npm install
         working-directory: ./tests
 
+      - name: Install test framework
+        run: npm -g install jest nyc
+
       - name: Run All Tests
         run: make test

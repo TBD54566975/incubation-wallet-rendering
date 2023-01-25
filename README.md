@@ -2,6 +2,7 @@
 
 [![license Apache 2](https://img.shields.io/badge/license-Apache%202-black)](https://github.com/TBD54566975/ssi-sdk/blob/main/LICENSE)
 [![issues](https://img.shields.io/github/issues/TBD54566975/incubation-wallet-rendering)](https://github.com/TBD54566975/incubation-wallet-rendering/issues)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering?ref=badge_shield)
 
 ## Overview
 
@@ -65,12 +66,11 @@ work.
   <body>
     <h1>Getting started with Wallet Rendering</h1>
     <div id="viz" />
-    <div id="res" class="alert"></div>
     <script type="text/javascript" src="deps/jquery.min.js"></script>
     <script type="text/javascript" src="deps/underscore.js"></script>
-    <script type="text/javascript" src="lib/walletrendering.js"></script>
+    <script type="text/javascript" src="lib/jro.js"></script>
     <script type="text/javascript">
-      $("#viz").walletRender({
+      $("#viz").renderWallet({
         data: {
           thumbnail: {
             uri: "https://dol.wa.com/logo.png",
@@ -100,6 +100,10 @@ Playground is a simple Wallet Rendering editor that lets you try out and extend 
 
 This will be available in the near future, so please stay tuned.
 
+<div align="center">
+  <img width="600" src="https://i.imgur.com/1xxZpke.jpg" alt="sample playground" />
+</div>
+
 ## Roadmap
 
 1. v0.1: Initial Infrastructure and implementation of Wallet Rendering Specs.
@@ -113,8 +117,13 @@ This is the current proposed file structure. It may change as the project mature
 ```text
 - deps // any dependencies
 - lib // library
+<<<<<<< HEAD
   - walletrendering.js
   - walletrendering.min.js
+=======
+  - wrender.js
+  - wrender.min.js
+>>>>>>> c910e20a4a59d33a329d313fae9e9ef69266bb07
 - packages // packages built to support the wallet rendering core lib
   - angular
   - vue
@@ -134,3 +143,7 @@ This is the current proposed file structure. It may change as the project mature
 | [CONTRIBUTING.md](./CONTRIBUTING.md)       | Developer guide to build, test, run, access CI, chat, discuss, file issues    |
 | [GOVERNANCE.md](./GOVERNANCE.md)           | Project governance                                                            |
 | [LICENSE](./LICENSE)                       | Apache License, Version 2.0                                                   |
+
+## License
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FTBD54566975%2Fincubation-wallet-rendering?ref=badge_large)
