@@ -19,6 +19,10 @@ $("document").ready(function () {
       path: "entity_styles.json",
     },
     {
+      name: "Getting Started Schema",
+      path: "getting-started.json",
+    },
+    {
       name: "Credential Manifest Schema",
       path: "credential-manifest.json",
     },
@@ -48,7 +52,11 @@ $("document").ready(function () {
       name: "Entity Styles Examples",
       id: "entity-styles",
       path: "entity-styles.json",
-      schema: "entity_styles.json",
+    },
+    {
+      name: "Getting Started Exmple",
+      id: "getting-started",
+      path: "getting-started.json",
     },
     {
       name: "Data Mapping Object With Text",
@@ -173,8 +181,10 @@ $("document").ready(function () {
       schemaSelector.append(new Option(v.name, v.path));
     });
 
-    const defaultSchema = "credential-manifest.json";
+    // const defaultSchema = "credential-manifest.json";
+    // const defaultData = "cm-all-features.json";
     const defaultData = "cm-all-features.json";
+    const defaultSchema = "credential-manifest.json";
 
     exampleSelector.val(defaultData);
 
@@ -206,7 +216,8 @@ $("document").ready(function () {
     try {
       var data = JSON.parse(dataEditor.getSession().getValue());
       var schema = JSON.parse(schemaEditor.getSession().getValue());
-      target.walletRender({
+      console.log("rendering schema");
+      target.credentialRender({
         data: data,
         schema: schema,
       });
